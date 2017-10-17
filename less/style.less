@@ -1,0 +1,682 @@
+@import "../css/reset.css";
+@import "../fonts/stylesheet.css";
+@import "../fonts/style.css";
+
+
+@gradient: linear-gradient(rgb(162, 227, 249), rgb(248, 166, 222));
+@twoColor: linear-gradient(to bottom, rgb(247, 247, 241) 0%, rgb(247, 247, 241) 70%, rgb(247, 247, 241) 50%, #fff 50%, #fff 50%);
+
+
+
+.header {
+    height: 100vh;
+    background: @gradient;
+    position: relative;
+    min-height: 550px;
+
+    .header_inner {
+        position: absolute;
+        height: 100%;
+        margin-top: 30vh;
+        width: 100%;
+        
+
+        .header_body {            
+            
+
+            .header_content {
+                display: flex;
+                justify-content: center;
+                
+                .content_left {
+                    width: auto;
+                    
+
+                    h1{
+                        font-family: "Myriad Pro", "Open Sans", sans-serif;
+                        font-size: 90px;
+                        line-height: 106px;
+                        font-weight: 300;
+                        color: #fff;
+                        text-transform: uppercase;
+                        margin: 0;
+                    }
+
+                    .white_line {
+                        margin: 56px 0px 52px 0px;
+                        width: 225px;
+                        height: 13px;
+                        background-color: #fff;
+                    }
+
+                    h3 {
+                        font-family: "Myriad Pro", "Open Sans", sans-serif;                        
+                        margin: 0;
+                        font-size: 30px;
+                        font-weight: 300;
+                        color: #fff;
+                        text-transform: uppercase;
+                        letter-spacing: 0.12em;
+                    }
+                }
+
+                .content_right {
+                    margin-left: 3%;
+                    width: 180px;
+
+                    .main_nav {
+
+
+                        ul {
+                            margin: 0;
+
+                            li {
+                                list-style: none;
+                                text-align: center;
+                                
+                                a {
+                                    font-family: "Myriad Pro", "Open Sans", sans-serif;   
+                                    font-weight: 300;                     
+                                    text-decoration: none;
+                                    color: white;
+                                    text-transform: uppercase;
+                                    font-size: 28.8px;
+                                    line-height: 39px;
+                                    position: relative;
+                                    padding: 10px;
+                                    letter-spacing: 0.08em;
+
+                                    &:after {
+                                        content: "";
+                                        height: 3px;
+                                        background-color: #fff;
+                                        position: absolute;
+                                        bottom: -2px;
+                                        right: 30%;
+                                        left: 30%;
+                                        justify-content: center;
+                                        transition: 0.3s ease-out;
+                                        
+
+                                    }
+
+                                    &:hover {
+
+
+                                        &:after {
+                                            right: 10%;
+                                            left: 10%;
+                                            
+                                        }
+                                    }
+
+                                }
+
+                                &:not(:first-child) {
+                                    margin-top: 2.5em;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+.section_about {
+    height: 100vh;
+    background: @twoColor;
+    position: relative;
+    min-height: 1000px;
+
+    .section_about_inner {
+        position: absolute;
+
+        .section_about_body {
+
+            .section_about_top {
+                margin-top: 4.5%;
+                margin-bottom: 3%;                
+
+                .section_about_top_body {
+                    width: max-content;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    align-items: center;
+                    
+    
+                    .black_line {
+                        width: 84px;
+                        height: 5px;
+                        background-color: #000;
+                    }
+                    
+                    h2 {
+                        font-family: "Myriad Pro", "Open Sans", Arial;
+                        font-weight: 800;
+                        text-transform: uppercase;
+                        color: #000;
+                        line-height: 60px;
+                        font-size: 40px;
+                        text-align: center;
+                        margin: 0 0 0 17px;
+                        padding-top: 7px;
+    
+                    }
+                }
+            }
+
+            .section_about_bottom {
+
+                .section_about_bottom_body {
+
+                    .profile_pic {
+                        height: 90%;
+                    }
+    
+                    p {
+                        font-size: 24px;
+                        line-height: 40px;
+                        font-family: "Myriad Pro", "Open Sans", sans-serif;
+                        padding-top: 66px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.section_work {
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+
+    .section_work_inner {
+        position: absolute;
+
+        .section_work_body {
+
+            .section_work_top {
+                margin-top: 4.5%;
+
+                .section_work_top_upper {
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+
+                    h2 {
+                        font-family: "Myriad Pro", "Open Sans", sans-serif;
+                        font-size: 45px;
+                        text-transform: uppercase;
+                        line-height: 40px;
+                        color: #000;
+                        font-weight: 800;
+                        margin-bottom: 0;
+
+                    }
+
+                    .black_line {
+                        width: 136px;
+                        height: 5px;
+                        background-color: #000;
+                        margin-left: 14px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .section_work_top_lower {
+
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    margin-left: 50%;
+                    transform: translateX(-30%);
+
+                    h2 {
+                        font-family: "Myriad Pro", "Open Sans", Arial;
+                        font-size: 45px;
+                        line-height: 40px;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-weight: 800;
+                        margin-bottom: 0;
+
+                    }
+                }
+            }
+
+            .section_work_middle {
+
+                
+            }
+        }
+    }
+}
+
+.section_store {
+    height: 100vh;
+    background-color: #f8cff7;
+    position: relative;
+    min-height: 1000px;
+
+    .section_store_inner {
+        position: absolute;
+        height: 100%;
+
+        .section_store_top {
+            margin-top: 114px;
+            margin-bottom: 164px;
+
+            .section_store_top_upper {
+                h2 {
+                    font-family: "Myriad Pro", "Open Sans", sans-serif;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 45px;
+                    line-height: 40px;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    width: max-content;
+
+                }
+
+            }
+            .section_store_top_lower {
+                .white_line {
+                    height: 5px;
+                    width: 102px;
+                    background-color: #fff;
+                    margin-left: 50%;
+                }
+            }
+        }
+        
+
+        .section_store_body {
+            position: relative;            
+
+            .left-arrow {
+                position: relative;                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                .arrow {
+                   background-color: transparent;
+                   width: 50px;
+                   height: 50px;
+                   border-top: 12px solid #fff;
+                   border-left: 12px solid #fff;
+                   transform: rotate(-45deg);
+                }
+            }
+
+            .right-arrow {
+                position: relative;                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                .arrow {
+                   background-color: transparent;
+                   width: 50px;
+                   height: 50px;
+                   border-top: 12px solid #fff;
+                   border-right: 12px solid #fff;
+                   transform: rotate(45deg);
+                }
+            }
+
+            .store-area {
+                overflow: hidden;
+
+                .wrap {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+
+                    [alt] {
+                        width: 95%;
+                        margin-bottom: 30px;
+                    }
+                }
+
+            }
+
+            
+        }
+    }
+}
+
+.store_p_style {
+    font-family: "Myriad Pro", "Open Sans", sans-serif;
+    font-size: 30px;
+    line-height: 48px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 0;
+
+}
+
+.section_blog {
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    min-height: 1500px;
+
+    .section_blog_inner {
+        position: absolute;
+
+        .section_blog_body {
+
+            .section_blog_top {
+                margin-top: 115px;
+                margin-bottom: 160px;
+
+                .section_blog_top_upper {
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+
+                    h2 {
+                        font-family: "Myriad Pro", "Open Sans", sans-serif;
+                        font-size: 45px;
+                        text-transform: uppercase;
+                        line-height: 40px;
+                        color: #000;
+                        font-weight: 800;
+                        margin-bottom: 0;
+
+                    }
+
+                    .black_line {
+                        width: 77px;
+                        height: 5px;
+                        background-color: #000;
+                        margin-left: 14px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .section_blog_top_lower {
+
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    margin-left: 50%;
+                    transform: translateX(-30%);
+
+                    h2 {
+                        font-family: "Myriad Pro", "Open Sans", Arial;
+                        font-size: 45px;
+                        line-height: 40px;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-weight: 800;
+                        margin-bottom: 0;
+
+                    }
+                }
+            }
+
+            .section_blog_middle {
+                max-width: 1170px;
+
+                > :not(:first-child) {
+                    margin-top: 40px;
+                }
+
+                
+                .blog_post {
+
+                    .blog_post_body {
+
+                        .blog_post_content {
+
+                            .blog_img {
+
+                                height: 100%;
+                            }
+
+                            .blog_text {
+                                position: relative;
+
+                                > :last-child {
+                                    position: absolute;
+                                    bottom: 0;
+                                    margin-bottom: 0;
+                                }
+
+                                .blog_date {
+                                    font-family: "Myriad Pro", "Open Sans", sans-serif;
+                                    font-size: 14px;
+                                    line-height: 41px;
+                                    color: #000;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                }
+
+                                .blog_title {
+                                    font-family: "Myriad Pro", "Open Sans", sans-serif;
+                                    font-size: 30px;
+                                    line-height: 27px;
+                                    text-transform: uppercase;
+                                    color: #000;
+                                    font-weight: 700;
+                                }
+
+                                .blog_par {
+                                    font-family: "Myriad Pro", "Open Sans", sans-serif;
+                                    font-size: 19px;
+                                    color: #000;
+                                    font-weight: 300;
+                                    margin-bottom: 50px;
+                                }
+
+                                .open_post {
+                                    font-family: "Myriad Pro", "Open Sans", sans-serif;
+                                    font-size: 16px;
+                                    text-decoration: underline;
+                                    color: #000;
+                                    line-height: 20px;
+                                    text-transform: uppercase;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+
+
+.section_contact {
+    height: "calc(100vh - 15%)";
+    background-color: #f7f7f1;
+    position: relative;
+    min-height: 900px;
+
+    .section_contact_inner {
+        position: absolute;
+
+        .section_contact_body {
+
+            .section_contact_top {
+                margin-top: 115px;
+                margin-bottom: 160px;
+
+                .section_contact_top_upper {
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+
+                    h2 {
+                        font-family: "Myriad Pro", "Open Sans", sans-serif;
+                        font-size: 45px;
+                        text-transform: uppercase;
+                        line-height: 40px;
+                        color: #000;
+                        font-weight: 800;
+                        margin-bottom: 0;
+
+                    }
+
+                    .black_line {
+                        width: 77px;
+                        height: 5px;
+                        background-color: #000;
+                        margin-left: 14px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .section_contact_top_lower {
+
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    margin-left: 50%;
+                    transform: translateX(-30%);
+
+                    h2 {
+                        font-family: "Myriad Pro", "Open Sans", Arial;
+                        font-size: 45px;
+                        line-height: 40px;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-weight: 800;
+                        margin-bottom: 0;
+
+                    }
+                }
+            }
+
+            .section_contact_middle {
+                
+
+                .contact_body {
+
+                    .contact_content {
+
+                            
+
+                        .contact_text {
+                            position: relative;
+
+                                
+                        }
+
+                        #map {
+                                
+                            max-height: 400px;
+                            width: 100%;
+                                                                
+                        }
+
+                        .con_title {
+                            font-family: "Myriad Pro", "Open Sans", Arial;
+                            font-size: 29px;
+                            line-height: 26px;
+                            text-transform: uppercase;
+                            color: #000;
+                            font-weight: 500;
+                            margin-bottom: 1.2em;
+
+                        }
+
+                        .con_par {
+                            font-family: "Myriad Pro", "Open Sans", Arial;
+                            font-size: 25px;
+                            line-height: 35px;
+                            color: #000;
+                            font-weight: 300;
+
+                        }
+
+                        .con_par_1, .con_par_4 {
+                            text-transform: capitalize;
+                        }
+
+                        .con-to-form a {
+                            font-family: "Myriad Pro", "Open Sans", Arial;
+                            font-size: 25px;
+                            line-height: 40px;
+                            color: #000;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            text-decoration: underline;
+                            transition: 0.3s ease-out;
+
+                            &:hover {
+                                color: #f8cff7;
+                            }
+                        }
+
+                        
+                    }
+                }
+            }
+
+            .section_contact_bottom {
+                margin-top: 5%;
+
+                .section_contact_inner {
+                    width: 100%;
+                    position: relative;
+
+                    .section_contact_body {
+
+                        .social_links {
+                            font-family: 'icomoon';
+                            speak: none;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-variant: normal;
+                            text-transform: none;
+                            line-height: 1;
+                            font-size: 3em;
+
+                            a {
+                                text-decoration: none;
+                                color: #000;
+                                transition: 0.3s ease-out;
+
+                                &:hover {
+                                    color: #f8cff7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    height: 20%;
+    width: 100%;
+    background-image: url("../images/cat_pattern.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
