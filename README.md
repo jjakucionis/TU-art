@@ -1,0 +1,1 @@
+This is main project from Vilnius Coding School intense bootcamp.

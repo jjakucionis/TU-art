@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="lt">
-<head>
+  <head>
 
   <!-- meta data -->
   <meta charset="utf-8">
@@ -10,25 +10,45 @@
   <title>TU | art</title>
 
   <!-- main style css -->
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/style.css"  media="all">
+  <link rel="stylesheet" type="text/css" href="scripts/slick/slick.css" />
+
+  <!-- fancybox css -->
+  <link rel="stylesheet" href="scripts/fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />  
+  
 
   <!-- bootstrap -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
   
   
 
   <!-- favicon -->
-  
+  <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
 
-  <!-- fonts -->
-  
-  
-</head>
 
-<body>
-    <header class="header">
-      <div class="header_inner">
-        <div class="header_body">
+  <script>
+      function initMap() {
+      var uluru = {lat: 54.687, lng: 25.279};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 7,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    };
+  </script>
+    
+  
+  </head>
+
+  <body>
+
+
+    <header class="header ">
+      <div class="header_inner container-fluid">
+        <div class="header_body row align-items-center justify-content-center">
           <div class="header_content">
             <div class="content_left">
               <h1>teklė ūla<br>pužauskaitė</h1>
@@ -36,7 +56,15 @@
               <h3>artist / illustrator</h3>
             </div>
             <div class="content_right">
-              <nav class="main_nav">
+                <div class="burger-header">
+                    <div class="toggle-button" id="burger-toggle">
+                        <span class="bar top"></span>
+                        <span class="bar middle"></span>
+                        <span class="bar bottom"></span>
+                    </div>
+                </div>
+              <nav class="main_nav overlay" id="overlay">
+                
                 <ul>
                     <li><a class="anchorlink" href="#about">about</a></li>
                     <li><a class="anchorlink" href="#work">work</a></li>
@@ -53,18 +81,18 @@
 
     <section id="about" class="section_about">
       <div class="section_about_inner container-fluid">
-        <div class="section_about_body">
-          <div class="section_about_top ">
-            <div class="section_about_top_body">
-                <div class="black_line"></div>
-                <h2>hey!</h2>
-            </div>
+        <div class="section_about_top row justify-content-center">
+          <div class="section_about_top_body">
+            <div class="black_line"></div>
+            <h2>hey!</h2>
           </div>
-          <div class="section_about_bottom container">
-            <div class="section_about_bottom_body row">
-              <img class="profile_pic col-lg-7 " src="images/profile.jpg" alt="My profile photo">
-              <p class="col-lg-5">I am an artist and illustrator, working and living in Vilnius, Lithuania. Having finished my studies at the Fine Arts Academy in Vilnius, textile bachelor (2015). Also I am food lover, cat lady and believe in magic.</p>
+        </div>
+        <div class="section_about_bottom row justify-content-center">
+          <div class="section_about_bottom_body row justify-content-center">
+            <div class="profile_pic col-lg-7 col-sm-7 ">
+              <img class="img-responsive" src="images/profile.jpg" alt="My profile photo">
             </div>
+            <p class="col-lg-5 col-md-8">I am an artist and illustrator, working and living in Vilnius, Lithuania. Having finished my studies at the Fine Arts Academy in Vilnius, textile bachelor (2015). Also I am food lover, cat lady and believe in magic.</p>
           </div>
         </div>
       </div>
@@ -72,263 +100,357 @@
 
     <section id="work" class="section_work">
       <div class="section_work_inner container-fluid">
-        <div class="section_work_body">
-          <div class="section_work_top">
-            <div class="section_work_top_upper">
-                <h2>check</h2>
-                <div class="black_line"></div>
+
+        <div class="section_work_top row">
+            <div class="section_work_top_upper col-12 justify-content-center">
+              <h2>check</h2>
+              <div class="black_line"></div>
             </div>
-            <div class="section_work_top_lower">
-                <h2>this out!</h2>
+            <div class="section_work_top_lower col-12 justify-content-center">
+              <h2>this out!</h2>
             </div>
-          </div>
-          <div class="section_work_middle">
-            <div class="hex-container">
-                <ul class="hex-grid">
-                    <li class="hex-grid__item">
-                      Item 1
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 2
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 3
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 4
-                    </li>
-                    <br>
-                    <li class="hex-grid__item">
-                      Item 5
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 6
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 7
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 8
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 9
-                    </li>
-                    <br>
-                    <li class="hex-grid__item">
-                      Item 10
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 11
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 12
-                    </li>
-                    <li class="hex-grid__item">
-                      Item 13
-                    </li>
-                  </ul>
+        </div>
+
+        <div class="section_work_body container">
+          <div class="img-row row justify-content-center">
+
+            <div class="img-container">
+                <a class="fancybox" rel="group" href="images/work/img1.jpg" title="Illustration name: Dancing girls">
+                  <img src="images/work/thumb_img1.jpg" alt="Illustration img">
+                  <div class="text-space">
+                    <p>+</p>
+                  </div>
+                </a>
             </div>
-          </div>
-          <div class="section_work_bottom">
-            <ul>
-              <li><a>illustration</a></li>
-              <li><a>design</a></li>
-              <li><a>other</a></li>
-            </ul>
+
+            <div class="img-container">
+              <a class="fancybox" rel="group" href="images/work/img2.jpg" title="Illustration name: BFF meeting">
+                <img src="images/work/thumb_img2.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="img-container">
+              <a class="fancybox" rel="group" href="images/work/img3.jpg" title="Illustration name: Game of thrones">
+                <img src="images/work/thumb_img3.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="img-container">
+              <a class="fancybox" rel="group" href="images/work/img4.jpg" title="Illustration name: Cat n skull">
+                <img src="images/work/thumb_img4.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container">
+              <a class="fancybox" rel="group" href="images/work/img5.jpg" title="Illustration name: Super cat">
+                <img src="images/work/thumb_img5.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container">
+              <a class="fancybox" rel="group" href="images/work/img6.jpg" title="Illustration name: Private time">
+                <img src="images/work/thumb_img6.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container">
+              <a class="fancybox" rel="group" href="images/work/img7.jpg" title="Illustration name: Ommmmm">
+                <img src="images/work/thumb_img7.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container">
+              <a class="fancybox" rel="group" href="images/work/img8.jpg" title="Illustration name: Tattoo test">
+                <img src="images/work/thumb_img8.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/img9.jpg" title="Illustration name: Face mask">
+                <img src="images/work/thumb_img9.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/img10.jpg" title="Illustration name: To the army">
+                <img src="images/work/thumb_img10.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/img11.jpg" title="Illustration name: Ghosts">
+                <img src="images/work/thumb_img11.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/img12.jpg" title="Illustration name: Hide n seek">
+                <img src="images/work/thumb_img12.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/img13.jpg" title="Illustration name: Cat poo">
+                <img src="images/work/thumb_img13.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/img14.jpg" title="Illustration name: Tattoo face">
+                <img src="images/work/thumb_img14.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/img15.jpg" title="Illustration name: Tattoo test 2">
+                <img src="images/work/thumb_img15.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+            <div class="img-container hidden-img visible-img">
+              <a class="fancybox" rel="group" href="images/work/didelis.jpg" title="Illustration name: Shower time">
+                <img src="images/work/thumb_didelis.jpg" alt="Illustration img">
+                <div class="text-space">
+                  <p>+</p>
+                </div>
+              </a>
+            </div>
+
           </div>
         </div>
+
+        <script> // when there is more than 8 images, script add all extra to hidden location
+            function hiddenImg() {
+                var x = document.getElementsByClassName("img-container");
+                if (x.length > 8) {
+                    for (var i = 8; i < x.length; i++) {
+                    x[i].className += " hidden-img visible-img";
+                    }
+                }
+        }
+        hiddenImg();
+        </script>
+
+        <div class="section_work_bottom container">
+          <div class="more-container row justify-content-center">
+            <div class="more">
+              <h4 id="show-more">show me more!</h4>
+            </div>
+          </div>
+        </div>  
       </div>
     </section>
 
     <section id="store" class="section_store">
-      <div class="section_store_inner container-fluid">
-        <div class="section_store_top">
-          <div class="section_store_top_upper">
-            <h2>store !</h2>
-          </div>
-          <div class="section_store_top_lower">
-            <div class="white_line"></div>
-          </div>
-      </div>
-
-      <div id="carousel-controls" class="carousel slide" data-ride="carousel">
-        <div class="section_store_body row carousel-inner">
-
-          <div class="left-arrow col-2">
-            <a href="#carousel-controls" role="button" data-slide="prev">
-              <div class="arrow"></div>
-            </a>
-          </div>
-
-
-          <div class="store-area col-8 carousel-item active">
-
-            <div class="d-block w-100">
-
-              <div class="wrap" alt="First slide">
-                  <div class="store-content-1">
-                      <img src="images/shop_tote_bag.jpg" alt="Tote bag photo">
-                      <p class="store_p_style">Tote bag "space ship"</p>
-                      <p class="store_p_style">20 eur</p>
-                  </div>
-                  <div class="store-content-2">
-                      <img src="images/shop_cat_print.jpg" alt="Cat print photo">
-                      <p class="store_p_style">Custom your cat illustration</p>
-                      <p class="store_p_style">30+ eur</p>
-                  </div>
-              </div>
-
+        <div class="section_store_inner container-fluid">
+          <div class="section_store_top">
+            <div class="section_store_top_upper row justify-content-center">
+              <h2>store !</h2>
+            </div>
+            <div class="section_store_top_lower row justify-content-center">
+              <div class="white_line"></div>
+            </div>
+        </div>
+  
+        <div class="slider-body row">
+  
+            <div class="left-arrow col-2">
+              <a class="prev">
+                <div class="arrow"></div>
+              </a>
             </div>
 
-          </div>
+            <div class="slider-content col-8" id="slider-content">
 
-          <div class="store-area col-8 carousel-item">
-              <div class="wrap" alt="Second slide">
-                  <div class="store-content-1">
-                      <img src="images/shop_tote_bag.jpg" alt="Tote bag photo">
-                      <p class="store_p_style">Tote bag "space ship"</p>
+                <div class="store-content">
+                    <img src="images/store_items/shop_tote_bag.jpg" alt="Store item">
+                    <div class="store-text">
+                      <p class="store_p_style">Tote bag "Space ship"</p>
                       <p class="store_p_style">20 eur</p>
-                  </div>
-                  <div class="store-content-2">
-                      <img src="images/shop_tote_bag.jpg" alt="Cat print photo">
+                    </div> 
+                </div>
+                <div class="store-content">
+                    <img src="images/store_items/shop_cat_print.jpg" alt="Store item">
+                    <div class="store-text">
                       <p class="store_p_style">Custom your cat illustration</p>
                       <p class="store_p_style">30+ eur</p>
-                  </div>
-              </div>
-          </div>
+                    </div>
+                </div>
+                <div class="store-content">
+                    <img src="images/store_items/postcard1.jpg" alt="Store item">
+                    <div class="store-text">
+                      <p class="store_p_style">Postcard "All the single ladies"</p>
+                      <p class="store_p_style">5 eur</p>
+                    </div>
+                </div>
+                <div class="store-content">
+                    <img src="images/store_items/postcard2.jpg" alt="Store item">
+                    <div class="store-text">
+                      <p class="store_p_style">Postcard "Cats!"</p>
+                      <p class="store_p_style">5 eur</p>
+                    </div>
+                </div>
+                <div class="store-content">
+                    <img src="images/store_items/postcard3.jpg" alt="Store item">
+                    <div class="store-text">
+                      <p class="store_p_style">Postcard "Private time"</p>
+                      <p class="store_p_style">5 eur</p>
+                    </div>
+                </div>
 
-          <div class="store-area col-8 carousel-item">
-              <div class="wrap" alt="Third slide">
-                  <div class="store-content-1">
-                      <img src="images/shop_cat_print.jpg" alt="Tote bag photo">
-                      <p class="store_p_style">Tote bag "space ship"</p>
-                      <p class="store_p_style">20 eur</p>
-                  </div>
-                  <div class="store-content-2">
-                      <img src="images/shop_cat_print.jpg" alt="Cat print photo">
-                      <p class="store_p_style">Custom your cat illustration</p>
-                      <p class="store_p_style">30+ eur</p>
-                  </div>
-              </div>
+            </div>
+  
+            <div class="right-arrow col-2">
+                <a class="next">
+                  <div class="arrow"></div>
+                </a>               
+            </div> 
           </div>
-
-
-          <div class="right-arrow col-2">
-              <a href="#carousel-controls" role="button" data-slide="next">
-                <div class="arrow"></div>
-              </a>               
-          </div>
-          
         </div>
-      </div>
-      </div>
-
     </section>
 
     <section id="blog" class="section_blog">
-      <div class="section_blog_inner container-fluid">
-        <div class="section_blog_body">
-          <div class="section_blog_top">
-            <div class="section_blog_top_upper">
-                <h2>the</h2>
-                <div class="black_line"></div>
-            </div>
-            <div class="section_blog_top_lower">
-                <h2>blog!</h2>
+      <div class="section_blog_inner container">
+
+        <div class="section_blog_top row ">
+          <div class="section_blog_top_upper col-12 justify-content-center">
+              <h2>the</h2>
+              <div class="black_line"></div>
+          </div>
+          <div class="section_blog_top_lower col-12 justify-content-center">
+            <h2>blog!</h2>
+          </div>
+        </div>
+          
+        <div class="section_blog_middle">
+
+          <div class="blog_post row">
+            <img class="blog_img col-sm-12 col-md-6" src="images/blog_img_1.jpg" alt="Norway landscape photo">
+            <div class="blog_text col-sm-12 col-md-4">
+                <h4 class="blog_date">27 august 2017</h4>
+                <h3 class="blog_title">pink tiger lost<br>in norway mountains</h3>
+                <p class="blog_par">Did you see a pink tiger sometime? I saw. In my dreams. And also on my jacket. We traveled togheter in Norway. Side by side.</p>
+                <h4 class="open_post">open post</h4>
             </div>
           </div>
-          <div class="section_blog_middle container-fluid">
-            <div class="blog_post">
-              <div class="blog_post_body container">
-                <div class="blog_post_content row">
-                  <img class="blog_img col-6" src="images/blog_img_1.jpg" alt="Norway landscape photo">
-                  <div class="blog_text col-4">
-                      <h4 class="blog_date">27 august 2017</h4>
-                      <h3 class="blog_title">pink tiger lost<br>in norway mountains</h3>
-                      <p class="blog_par">Did you see a pink tiger sometime? I saw. In my dreams. And also on my jacket. We traveled togheter in Norway. Side by side.</p>
-                      <h4 class="open_post">open post</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="blog_post">
-                <div class="blog_post_body container">
-                  <div class="blog_post_content row justify-content-end">
-                    <img class="blog_img col-5" src="images/blog_img_2.jpg" alt="Norway landscape photo">
-                    <div class="blog_text col-4">
-                        <h4 class="blog_date">10 july 2017</h4>
-                        <h3 class="blog_title">bugs will<br>fix everything</h3>
-                        <p class="blog_par">This week I got task to make illustrationfor a tattoo cover. And why not the bug? Now I am possessed with them.</p>
-                        <h4 class="open_post">open post</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="blog_post row justify-content-end">  
+            <img class="blog_img col-sm-12 col-md-5" src="images/blog_img_2.jpg" alt="Norway landscape photo">
+            <div class="blog_text col-sm-12 col-md-4">
+                <h4 class="blog_date">10 july 2017</h4>
+                <h3 class="blog_title">bugs will<br>fix everything</h3>
+                <p class="blog_par">This week I got task to make illustration for a tattoo cover. And why not the bug? Now I am possessed with them.</p>
+                <h4 class="open_post">open post</h4>
+            </div>  
+          </div>
+        </div>
+
+        <div class="section_blog_bottom container">
+          <div class="check-more-container row justify-content-center">
+            <div class="check-more">
+              <h4 id="check-more">check more posts</h4>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
 
     <section id="contact" class="section_contact">
-      <div class="section_contact_inner container-fluid">
-        <div class="section_contact_body">
-          <div class="section_contact_top">
-            <div class="section_contact_top_upper">
-                <h2>get in</h2>
-                <div class="black_line"></div>
-            </div>
-            <div class="section_contact_top_lower">
-                <h2>touch!</h2>
-            </div>
+      <div class="section_contact_inner container">
+        
+        <div class="section_contact_top row">
+          <div class="section_contact_top_upper col-12 justify-content-center">
+              <h2>get in</h2>
+              <div class="black_line"></div>
           </div>
-          <div class="section_contact_middle container-fluid">
-              <div class="contact_body container">
-                <div class="contact_content row justify-content-center">
-                  <div class="contact_text col-4">
-                      <h3 class="con_title">my location</h3>
-                      <p class="con_par con_par_1">vilnius, lithuania</p>
-                      <p class="con_par con_par_2">tekleula@gmail.com</p>
-                      <p class="con_par con_par_3">(+370) 656 30820</p>
-                      <p class="con_par con_par_4">teklė - ūla pužauskaitė</p>
-                      <h4 class="con-to-form"><a href="#">say hello!</a></h4>
-                  </div>
-                  <div id="map" class="col-6"></div>                            
-                </div>
-              </div>
-          </div>
-          <div class="section_contact_bottom container-fluid">
-            <div class="section_contact_inner container">
-              <div class="section_contact_body row justify-content-center">
-                <p class="social_links">
-                  <a href="#">&#xe900;</a> 
-                  <a href="#">&#xea90;</a>
-                  <a href="#">&#xeaa8;</a>
-                  <a href="#">&#xeaa8;</a> 
-                </p>
-              </div>
-            </div>
+          <div class="section_contact_top_lower col-12 justify-content-center">
+              <h2>touch!</h2>
           </div>
         </div>
+
+        <div class="section_contact_middle row justify-content-center">
+          <div class="contact_text col-sm-12 col-md-10 col-lg-3">
+              <h3 class="con_title">my location</h3>
+              <p class="con_par con_par_1">vilnius, lithuania</p>
+              <p class="con_par con_par_2 ">tekleula@gmail.com</p>
+              <p class="con_par con_par_3 mobile">(+370) 656 30820</p>
+              <p class="con_par con_par_4">teklė - ūla pužauskaitė</p>
+              <h4 class="con-to-form" id="say-hello">say hello!</h4>
+
+              <div id="contactForm" class="contactForm col-12 col-centered">
+                <form action="mailto:tekleula@gmail.com" method="post">
+                  <input placeholder="NAME" type="text" required />
+                  <input placeholder="EMAIL" type="email" required />
+                  <input value="Hello, Tekle!" type="text" required />
+                  <textarea placeholder="COMMENT"></textarea>
+                  <input class="formBtn" type="submit" value="SEND" />
+                </form>
+              </div>
+
+          </div>
+          <div id="map" class="col-sm-12 col-md-10 col-lg-7"></div>
+        </div>
+
+          <div class="section_contact_bottom container">
+            <div class="section_contact_body row justify-content-center">
+              <p class="social_links">
+                <a href="#">&#xe900;</a> 
+                <a href="#">&#xea90;</a>
+                <a class="beh-1" href="#">&#xeaa8;</a>
+                <a class="beh-2" href="#">&#xeaa8;</a> 
+              </p>
+            </div>
+          </div>
+        
       </div>
     </section>
 
-
     <footer class="footer">
-      <div>
         <div>
-          
+          <div>
+            
+          </div>
         </div>
-      </div>
-
     </footer>
-
 
     <!-- ============= SCRIPTS ============== -->
     <script type="text/javascript" src="scripts/jquery.min.js"></script>   
     <script type="text/javascript" src="scripts/TweenMax.min.js"></script> 
     <script type="text/javascript" src="scripts/popper.min.js"></script>     
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/slick/slick.min.js"></script>  
+    <script type="text/javascript" src="scripts/fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
     <script type="text/javascript" src="scripts/main.js"></script> 
 
     <script async defer
